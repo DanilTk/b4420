@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="LOGSTASH_APPENDER" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+    <destination>localhost:5044</destination>
+    <includeCallerData>true</includeCallerData>
+    <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+      <providers>
+        <timestamp><fieldName>timestamp</fieldName></timestamp>
+        <pattern>
+          <pattern>
+            {
+              "timestamp": "%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ}",
+              "level": "%level",
+              "logger": "%logger",
+              "thread": "%thread",
+              "correlation-id": "%X{correlation-id}",
+              "message": "%message",
+              "class": "%class",
+              "method": "%method",
+              "exception": "%exception",
+              "line": "%L",
+              "application": "example-service"
+            }
+          </pattern>
+        </pattern>
+      </providers>
+    </encoder>
+  </appender>
+  <root level="INFO">
+    <appender-ref ref="LOGSTASH_APPENDER"/>
+  </root>
+</configuration>

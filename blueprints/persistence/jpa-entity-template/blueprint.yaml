@@ -1,0 +1,26 @@
+id: jpa-entity-template
+concern: persistence
+category: logic
+tags:
+- jpa
+- entity
+- template
+- uuid
+- base-entity
+description: Template for a JPA entity extending BaseEntity with placeholder fields.
+depends_on:
+- jpa-base-entity
+files:
+- EntityTemplate.java
+placeholders:
+- EntityName
+- package
+- table_name
+dependencies:
+  maven:
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-data-jpa
+    version: ${spring_boot_version}
+    recommended: true
+  gradle:
+  - implementation("org.springframework.boot:spring-boot-starter-data-jpa:${spring_boot_version}")

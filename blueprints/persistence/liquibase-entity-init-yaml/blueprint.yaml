@@ -1,0 +1,22 @@
+id: liquibase-entity-init-yaml
+concern: persistence
+category: devops
+tags:
+- liquibase
+- yaml
+- migration
+- schema
+- postgres
+description: Liquibase YAML changelog for entity schema with audit and domain fields.
+files:
+- changelog-create-{{table_name}}.yaml
+placeholders:
+- table_name
+- author
+dependencies:
+  maven:
+  - groupId: org.liquibase
+    artifactId: liquibase-core
+    version: 4.25.1
+  gradle:
+  - implementation("org.liquibase:liquibase-core:4.25.1")

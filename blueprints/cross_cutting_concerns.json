@@ -1,0 +1,200 @@
+[
+  {
+    "id": "security",
+    "category": "security",
+    "title": "Security",
+    "what_it_solves": "Enforces access control and protects against unauthorized access",
+    "description": "Authentication, authorization, CSRF protection, JWT tokens, and method-level security",
+    "tools": "Spring Security, @PreAuthorize, JWT, filters",
+    "tags": "security, auth, access-control, jwt"
+  },
+  {
+    "id": "logging",
+    "category": "observability",
+    "title": "Logging & Monitoring",
+    "what_it_solves": "Enables diagnostics, error tracing, and activity audit trails",
+    "description": "Centralized logging of requests, errors, and business events, often with correlation IDs",
+    "tools": "Slf4j, Logback, MDC, AOP",
+    "tags": "logging, observability, debug, monitoring"
+  },
+  {
+    "id": "tracing",
+    "category": "observability",
+    "title": "Tracing & Observability",
+    "what_it_solves": "Supports distributed tracing and performance analysis",
+    "description": "Tracks latency and spans across microservices, surfaces runtime metrics",
+    "tools": "OpenTelemetry, Zipkin, @Timed, Spring Actuator",
+    "tags": "tracing, spans, metrics, observability"
+  },
+  {
+    "id": "exception",
+    "category": "security",
+    "title": "Exception Handling",
+    "what_it_solves": "Ensures consistent and informative error handling",
+    "description": "Centralized exception resolution and standardized error response structure",
+    "tools": "@ControllerAdvice, @ExceptionHandler, custom models",
+    "tags": "exception, errors, error-handling"
+  },
+  {
+    "id": "config",
+    "category": "devops",
+    "title": "Configuration Management",
+    "what_it_solves": "Enables externalized, profile-based, or secret-based config",
+    "description": "Environment-specific config management, dynamic updates, secure secret handling",
+    "tools": "application.yml, @Value, Spring Config Server, Vault",
+    "tags": "config, env, secrets, profiles"
+  },
+  {
+    "id": "cache",
+    "category": "performance",
+    "title": "Caching",
+    "what_it_solves": "Reduces backend load and improves performance",
+    "description": "Declarative method result caching with memory/local/distributed providers",
+    "tools": "@Cacheable, Caffeine, Redis",
+    "tags": "cache, performance, memory"
+  },
+  {
+    "id": "validation",
+    "category": "security",
+    "title": "Validation",
+    "what_it_solves": "Ensures correctness and consistency of input data",
+    "description": "Declarative input validation via annotations and constraint rules",
+    "tools": "@Valid, @NotNull, @Pattern, Bean Validation",
+    "tags": "validation, constraints, input-checks"
+  },
+  {
+    "id": "mapping",
+    "category": "performance",
+    "title": "Mapping & Transformation",
+    "what_it_solves": "Decouples API from internal domain models",
+    "description": "Converts between DTOs and JPA entities through mappers",
+    "tools": "MapStruct, ModelMapper, custom mappers",
+    "tags": "mapping, dto, transformation"
+  },
+  {
+    "id": "auditing",
+    "category": "logic",
+    "title": "Auditing",
+    "what_it_solves": "Tracks metadata like creation/update timestamps and user actions",
+    "description": "Auto-fills created/modified timestamps and user identity on persistence operations",
+    "tools": "@CreatedBy, @LastModifiedDate, Envers",
+    "tags": "auditing, metadata, timestamps"
+  },
+  {
+    "id": "testing",
+    "category": "devops",
+    "title": "Testing Support",
+    "what_it_solves": "Supports test setup and isolation",
+    "description": "Helps test services, repositories, and APIs reliably and repeatedly",
+    "tools": "@SpringBootTest, Testcontainers, MockMvc, Mockito",
+    "tags": "testing, mock, integration-tests"
+  },
+  {
+    "id": "serialization",
+    "category": "observability",
+    "title": "Serialization",
+    "what_it_solves": "Controls JSON behavior for DTOs/entities",
+    "description": "Customizes field visibility, polymorphism, enum formats, and null handling",
+    "tools": "Jackson, @JsonFormat, @JsonTypeInfo",
+    "tags": "serialization, json, enums, polymorphism"
+  },
+  {
+    "id": "transactional",
+    "category": "logic",
+    "title": "Transactional Boundaries",
+    "what_it_solves": "Ensures data consistency across ops",
+    "description": "Manages atomicity, rollback, retry policies, and method-level transactions",
+    "tools": "@Transactional, Spring Retry, @Retryable",
+    "tags": "transactions, rollback, retry"
+  },
+  {
+    "id": "communication",
+    "category": "integration",
+    "title": "Inter-service Communication",
+    "what_it_solves": "Enables safe HTTP/gRPC-based service communication",
+    "description": "Encapsulates REST/gRPC interactions and header propagation with fallback support",
+    "tools": "RestTemplate, WebClient, Feign, gRPC",
+    "tags": "communication, client, grpc, rest"
+  },
+  {
+    "id": "rate_limiting",
+    "category": "security",
+    "title": "Rate Limiting",
+    "what_it_solves": "Prevents abuse and API overuse",
+    "description": "Throttles requests per user, IP, or key with optional fallback",
+    "tools": "Bucket4j, Resilience4j, filters",
+    "tags": "rate-limit, throttle, api-protection"
+  },
+  {
+    "id": "messaging",
+    "category": "integration",
+    "title": "Messaging",
+    "what_it_solves": "Enables async, event-driven arch",
+    "description": "Produces and consumes messages via pub/sub systems",
+    "tools": "Kafka, RabbitMQ, @KafkaListener, @EventListener",
+    "tags": "messaging, events, pubsub"
+  },
+  {
+    "id": "i18n",
+    "category": "integration",
+    "title": "Internationalization",
+    "what_it_solves": "Supports locale-aware UI and formatting",
+    "description": "Provides language selection, message translation, and locale resolution",
+    "tools": "MessageSource, LocaleResolver",
+    "tags": "i18n, localization, languages"
+  },
+  {
+    "id": "resilience",
+    "category": "security",
+    "title": "Resilience",
+    "what_it_solves": "Increases fault tolerance and reliability",
+    "description": "Handles transient failures with retries, circuit breakers, and fallbacks",
+    "tools": "Resilience4j, @CircuitBreaker, @Retryable",
+    "tags": "resilience, fault-tolerance, retry, fallback"
+  },
+  {
+    "id": "resources",
+    "category": "logic",
+    "title": "Resource Management",
+    "what_it_solves": "Manages threads, IO, DB pools",
+    "description": "Ensures efficient usage and cleanup of system resources",
+    "tools": "ExecutorService, Commons IO, HikariCP",
+    "tags": "resource, threading, pool, connection"
+  },
+  {
+    "id": "pagination",
+    "category": "integration",
+    "title": "Pagination & Sorting",
+    "what_it_solves": "Efficient data retrieval and sorting",
+    "description": "Standard Spring Data integration for paginated and sorted queries",
+    "tools": "Pageable, Sort, Page<T>",
+    "tags": "pagination, sorting, spring-data"
+  },
+  {
+    "id": "openapi",
+    "category": "devops",
+    "title": "OpenAPI / API Docs",
+    "what_it_solves": "Exposes structured API documentation",
+    "description": "Generates OpenAPI 3-compliant documentation with schemas and examples",
+    "tools": "springdoc-openapi, Swagger UI, @Schema, @Operation",
+    "tags": "openapi, swagger, docs"
+  },
+  {
+    "id": "liquibase",
+    "category": "devops",
+    "title": "Liquibase / DB Migrations",
+    "what_it_solves": "Automates schema migrations and changelogs",
+    "description": "Tracks schema evolution across environments using changelogs and rollbacks",
+    "tools": "Liquibase, XML/YAML changelogs, @ChangeLog",
+    "tags": "liquibase, migrations, schema, versioning"
+  },
+  {
+    "id": "metrics",
+    "category": "observability",
+    "title": "Metrics Exposure",
+    "what_it_solves": "Exposes internal app performance metrics",
+    "description": "Provides Prometheus-compatible counters, timers, and gauges for monitoring",
+    "tools": "Micrometer, @Timed, Prometheus",
+    "tags": "metrics, prometheus, performance, observability"
+  }
+]

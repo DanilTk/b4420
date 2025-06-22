@@ -1,0 +1,35 @@
+id: global-exception-handler
+concern: exception
+category: security
+tags:
+  - exception
+  - handler
+  - spring
+  - resilience
+  - validation
+description: Global exception handler using Spring Boot and custom exception factories.
+files:
+  - GlobalExceptionHandler.java
+  - BaseErrorType.java
+  - BaseLoggerFactory.java
+
+dependencies:
+  maven:
+    - groupId: org.springframework.boot
+      artifactId: spring-boot-starter-web
+      version: ${spring_boot_version}
+    - groupId: org.springframework.boot
+      artifactId: spring-boot-starter-validation
+      version: ${spring_boot_version}
+    - groupId: org.springframework.boot
+      artifactId: spring-boot-starter-security
+      version: ${spring_boot_version}
+    - groupId: io.github.resilience4j
+      artifactId: resilience4j-spring-boot3
+      version: 2.2.0
+      recommended: true
+  gradle:
+    - implementation("org.springframework.boot:spring-boot-starter-web:${spring_boot_version}")
+    - implementation("org.springframework.boot:spring-boot-starter-validation:${spring_boot_version}")
+    - implementation("org.springframework.boot:spring-boot-starter-security:${spring_boot_version}")
+    - implementation("io.github.resilience4j:resilience4j-spring-boot3:2.2.0")

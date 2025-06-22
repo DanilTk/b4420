@@ -1,0 +1,28 @@
+id: logging-kafka-interceptor
+concern: logging
+category: observability
+tags:
+  - logging
+  - kafka
+  - mdc
+  - correlation-id
+description: Kafka interceptors for propagating MDC correlation IDs across producer and consumer logic.
+depends_on:
+  - messaging.kafka
+files:
+  - KafkaCorrelationProducerInterceptor.java
+  - KafkaCorrelationConsumerInterceptor.java
+
+dependencies:
+  maven:
+    - groupId: org.apache.kafka
+      artifactId: kafka-clients
+      version: 3.7.0
+      recommended: true
+    - groupId: org.springframework.kafka
+      artifactId: spring-kafka
+      version: ${spring_kafka_version}
+      recommended: true
+  gradle:
+    - implementation("org.apache.kafka:kafka-clients:3.7.0")
+    - implementation("org.springframework.kafka:spring-kafka:${spring_kafka_version}")

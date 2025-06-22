@@ -1,0 +1,14 @@
+spring:
+  docker:
+    compose:
+      enabled: true
+      file: docker/docker-compose-local.yaml
+  datasource:
+    url: jdbc:postgresql://localhost:5432/app
+    username: admin
+    password: pass
+  jpa:
+    properties:
+      hibernate:
+        generate_statistics: false
+    show-sql: false

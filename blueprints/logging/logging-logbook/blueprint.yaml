@@ -1,0 +1,21 @@
+id: logging-logbook
+concern: logging
+category: observability
+tags:
+  - logging
+  - logbook
+  - request
+  - response
+description: Logbook configuration for HTTP request/response logging.
+files:
+  - LogbookConfig.java
+  - LogbookWriter.java
+
+dependencies:
+  maven:
+    - groupId: org.zalando
+      artifactId: logbook-spring-boot-starter
+      version: 3.0.0
+      recommended: true
+  gradle:
+    - implementation("org.zalando:logbook-spring-boot-starter:3.0.0")

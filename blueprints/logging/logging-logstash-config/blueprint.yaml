@@ -1,0 +1,22 @@
+id: logging-logstash-config
+concern: logging
+category: observability
+tags:
+  - logging
+  - logstash
+  - elk
+  - json
+  - logback
+description: Logback and Docker configuration for sending structured logs to Logstash/ELK.
+files:
+  - logback-logstash.xml
+  - logstash.conf
+  - docker-compose-elk.yaml
+
+dependencies:
+  maven:
+    - groupId: net.logstash.logback
+      artifactId: logstash-logback-encoder
+      version: 7.3
+  gradle:
+    - implementation("net.logstash.logback:logstash-logback-encoder:7.3")

@@ -1,0 +1,22 @@
+id: logging-mdc-core
+concern: logging
+category: observability
+tags:
+  - logging
+  - mdc
+  - correlation-id
+  - http
+description: >
+  Basic MDC correlation ID setup for incoming HTTP requests.
+files:
+  - CorrelationIdFilter.java
+  - LoggerName.java
+
+dependencies:
+  maven:
+    - groupId: org.slf4j
+      artifactId: slf4j-api
+      version: 2.0.9
+      recommended: true
+  gradle:
+    - implementation("org.slf4j:slf4j-api:2.0.9")

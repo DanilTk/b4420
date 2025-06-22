@@ -1,0 +1,29 @@
+id: logging-webclient-filter
+concern: logging
+category: observability
+tags:
+  - logging
+  - webclient
+  - mdc
+  - correlation-id
+  - logbook
+description: WebClient filter that propagates MDC correlation ID header and integrates with Logbook.
+depends_on:
+  - webclient
+  - logging-logbook
+files:
+  - WebClientConfig.java
+
+dependencies:
+  maven:
+    - groupId: org.springframework.boot
+      artifactId: spring-boot-starter-webflux
+      version: 3.2.0
+      recommended: true
+    - groupId: org.zalando
+      artifactId: logbook-spring-boot-starter
+      version: 3.0.0
+      recommended: true
+  gradle:
+    - implementation("org.springframework.boot:spring-boot-starter-webflux:3.2.0")
+    - implementation("org.zalando:logbook-spring-boot-starter:3.0.0")

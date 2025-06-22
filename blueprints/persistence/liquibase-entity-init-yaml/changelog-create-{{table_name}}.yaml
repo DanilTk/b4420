@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-{{table_name}}
+      author: {{author}}
+      changes:
+        - createTable:
+            tableName: {{table_name}}
+            columns:
+              - column:
+                  name: uuid
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: version
+                  type: integer
+                  defaultValueNumeric: 0
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_at
+                  type: timestamp with time zone
+                  defaultValueComputed: current_timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp with time zone
+                  defaultValueComputed: current_timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: nip
+                  type: varchar(12)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: company_status
+                  type: varchar(15)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: picture_file_uuid
+                  type: uuid

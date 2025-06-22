@@ -1,0 +1,26 @@
+id: jpa-base-entity
+concern: persistence
+category: logic
+tags:
+- jpa
+- base-entity
+- uuid
+- auditable
+description: Base JPA entity with UUID ID, versioning, and audit timestamps.
+files:
+- BaseEntity.java
+- docker-compose.yaml
+- application-snippet.yaml
+dependencies:
+  maven:
+  - groupId: org.springframework.boot
+    artifactId: spring-boot-starter-data-jpa
+    version: ${spring_boot_version}
+    recommended: true
+  - groupId: org.postgresql
+    artifactId: postgresql
+    version: 42.7.3
+    recommended: true
+  gradle:
+  - implementation("org.springframework.boot:spring-boot-starter-data-jpa:${spring_boot_version}")
+  - implementation("org.postgresql:postgresql:42.7.3")

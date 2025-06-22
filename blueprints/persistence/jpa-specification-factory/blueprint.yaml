@@ -1,0 +1,19 @@
+id: jpa-specification-factory
+concern: query
+category: logic
+tags:
+- jpa
+- specification
+- criteria
+- vavr
+- filtering
+description: Reusable Specification factory helpers for building dynamic JPA queries.
+files:
+- BaseSpecificationFactory.java
+dependencies:
+  maven:
+  - groupId: io.vavr
+    artifactId: vavr
+    version: 0.10.4
+  gradle:
+  - implementation("io.vavr:vavr:0.10.4")
