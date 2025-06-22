@@ -1,0 +1,24 @@
+id: rest-crud-controller
+concern: controller
+category: application
+tags:
+- controller
+- rest
+- spring
+- openapi
+- crud
+description: Spring REST CRUD controller template for a generic entity with OpenAPI
+  annotations. No security enforced by default.
+files:
+- '{{entityName}}Controller.java'
+placeholders:
+- entityName
+- package
+- entityNameLower
+dependencies:
+  maven:
+  - groupId: org.springdoc
+    artifactId: springdoc-openapi-starter-webmvc-ui
+    version: 2.1.0
+  gradle:
+  - implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
