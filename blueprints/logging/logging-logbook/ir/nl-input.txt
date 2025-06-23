@@ -1,0 +1,1 @@
+Add structured logging for all HTTP requests and responses using Zalando Logbook. Logs should be formatted in JSON, and each request/response should include correlation ID, HTTP method, status, and timing data.

@@ -1,0 +1,1 @@
+Configure centralized structured logging with Logback and Logstash. Use JSON formatting and send logs to a local ELK stack. The system should support Docker-based ELK setup and parse logs for HTTP and application events.

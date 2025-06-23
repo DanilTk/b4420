@@ -1,0 +1,1 @@
+A simple logging setup that attaches a unique correlation ID to every HTTP request. The correlation ID should be generated if not provided, injected into the MDC, and passed through response headers. This helps trace requests across distributed systems.

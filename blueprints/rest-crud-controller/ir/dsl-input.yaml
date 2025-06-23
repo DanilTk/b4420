@@ -1,0 +1,11 @@
+controller:
+  type: rest
+  operations:
+    - getById: true
+    - getAllPaged: true
+    - create: true
+    - update: true
+    - delete: true
+  validation: true
+  openapi: true
+  secured: false

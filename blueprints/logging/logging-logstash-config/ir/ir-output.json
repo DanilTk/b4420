@@ -1,0 +1,18 @@
+{
+  "logging": {
+    "centralized": {
+      "elk": {
+        "enabled": true,
+        "logFormat": "json",
+        "transport": "tcp",
+        "correlationIdSupport": true,
+        "dockerCompose": true,
+        "ports": {
+          "logstash": 5044,
+          "elasticsearch": 9200,
+          "kibana": 5601
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "logging": {
+    "correlationId": {
+      "source": "header",
+      "fallback": "generate",
+      "inject": ["mdc", "responseHeader"],
+      "log": true
+    }
+  }
+}

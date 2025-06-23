@@ -1,0 +1,1 @@
+Create a REST controller for managing a single entity. It should expose typical CRUD endpoints — GET by ID, GET paginated list, POST create, PUT update, and DELETE remove. All methods should support validation and be annotated with OpenAPI documentation. Avoid adding security annotations by default.

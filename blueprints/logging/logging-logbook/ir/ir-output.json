@@ -1,0 +1,16 @@
+{
+  "logging": {
+    "http": {
+      "logbook": {
+        "format": "json",
+        "include": [
+          "correlationId",
+          "method",
+          "status",
+          "duration",
+          "body"
+        ]
+      }
+    }
+  }
+}
