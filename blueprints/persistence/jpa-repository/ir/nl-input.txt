@@ -1,0 +1,1 @@
+Create a JPA repository interface for an entity named Customer. Use UUID as the primary key type. It should extend JpaRepository and JpaSpecificationExecutor to support pagination and specifications.

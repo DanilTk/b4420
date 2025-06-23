@@ -1,0 +1,1 @@
+Define a base JPA entity that includes audit fields like uuid, version, createdAt, and updatedAt. Use Lombok and Hibernate annotations. This entity should be marked with @MappedSuperclass and reused across other domain entities.

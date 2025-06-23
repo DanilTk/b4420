@@ -1,0 +1,1 @@
+Create a reusable factory for building common JPA Specifications such as equals, not equals, likeIgnoreCase, in, notIn, childEquals, and grandChildEquals. It should return Specification<T> and support null-safety.

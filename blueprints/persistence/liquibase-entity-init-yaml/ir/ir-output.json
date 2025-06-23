@@ -1,0 +1,46 @@
+{
+  "liquibaseChangelog": {
+    "tableName": "customer",
+    "columns": [
+      {
+        "name": "uuid",
+        "type": "uuid",
+        "constraints": {
+          "primaryKey": true,
+          "nullable": false
+        }
+      },
+      {
+        "name": "name",
+        "type": "varchar(255)",
+        "constraints": {
+          "nullable": false
+        }
+      },
+      {
+        "name": "email",
+        "type": "varchar(255)",
+        "constraints": {
+          "nullable": false,
+          "unique": true
+        }
+      },
+      {
+        "name": "created_at",
+        "type": "timestamp with time zone",
+        "default": "current_datetime",
+        "constraints": {
+          "nullable": false
+        }
+      },
+      {
+        "name": "updated_at",
+        "type": "timestamp with time zone",
+        "default": "current_datetime",
+        "constraints": {
+          "nullable": false
+        }
+      }
+    ]
+  }
+}

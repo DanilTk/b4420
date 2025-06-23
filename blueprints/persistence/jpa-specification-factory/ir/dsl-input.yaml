@@ -1,0 +1,22 @@
+specificationFactory:
+  name: BaseSpecificationFactory
+  methods:
+    - name: whereEquals
+      input: [attribute, value]
+    - name: whereNotEquals
+      input: [attribute, value]
+    - name: whereLikeIgnoreCase
+      input: [attribute, value]
+    - name: whereIn
+      input: [attribute, values]
+    - name: whereNotIn
+      input: [attribute, values]
+    - name: whereChildEquals
+      input: [parentField, childField, value]
+    - name: whereGrandChildEquals
+      input: [parentField, childField, grandChildField, value]
+    - name: constantBoolean
+      input: [value]
+    - name: whereChildIn
+      input: [attribute, childAttribute, values]
+  nullSafe: true

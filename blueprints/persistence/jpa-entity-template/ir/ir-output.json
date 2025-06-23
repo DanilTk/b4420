@@ -1,0 +1,40 @@
+{
+  "entity": {
+    "name": "Customer",
+    "fields": [
+      {
+        "name": "id",
+        "type": "UUID",
+        "annotations": ["@Id", "@GeneratedValue", "@Column(nullable = false)"]
+      },
+      {
+        "name": "name",
+        "type": "String",
+        "annotations": ["@NonNull", "@Column(nullable = false)"]
+      },
+      {
+        "name": "email",
+        "type": "String",
+        "annotations": ["@Column(unique = true)"]
+      },
+      {
+        "name": "createdAt",
+        "type": "Instant",
+        "annotations": ["@Column(nullable = false)"]
+      }
+    ],
+    "relations": [
+      {
+        "name": "company",
+        "type": "Company",
+        "kind": "ManyToOne",
+        "fetch": "LAZY",
+        "optional": false
+      }
+    ],
+    "lombok": {
+      "enabled": true,
+      "builder": true
+    }
+  }
+}

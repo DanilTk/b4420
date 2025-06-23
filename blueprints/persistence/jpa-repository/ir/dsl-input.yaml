@@ -1,0 +1,9 @@
+repository:
+  name: Customer
+  idType: UUID
+  extend:
+    - JpaRepository
+    - JpaSpecificationExecutor
+  features:
+    - pagination: true
+    - specification: true

@@ -1,0 +1,19 @@
+entity:
+  base: true
+  fields:
+    - name: uuid
+      type: UUID
+      annotations: [@Id, @NonNull, @Column(nullable = false)]
+    - name: version
+      type: Integer
+      annotations: [@Version, @Column(nullable = false)]
+    - name: createdAt
+      type: Instant
+      annotations: [@Column(nullable = false), @NonNull]
+    - name: updatedAt
+      type: Instant
+      annotations: [@Column(nullable = false), @NonNull, @UpdateTimestamp]
+  lombok: true
+  superBuilder: true
+  mappedSuperclass: true
+  equalsAndHashCode: uuid

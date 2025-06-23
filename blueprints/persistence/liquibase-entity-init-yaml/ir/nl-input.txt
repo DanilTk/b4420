@@ -1,0 +1,1 @@
+Generate a Liquibase changelog YAML file that creates a table named customer with fields: uuid (PK, uuid), name (varchar, not null), email (varchar, unique), created_at (timestamp, default now), and updated_at (timestamp). Add Liquibase-style constraints.

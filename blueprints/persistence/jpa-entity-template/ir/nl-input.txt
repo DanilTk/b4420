@@ -1,0 +1,1 @@
+Create a JPA entity named Customer with fields: id (UUID, primary key), name (required string), email (unique string), and createdAt (timestamp). Annotate with Lombok and JPA. Include relation to Company using @ManyToOne.
