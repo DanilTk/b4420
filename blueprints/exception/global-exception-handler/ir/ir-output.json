@@ -1,0 +1,42 @@
+{
+  "type": "global-exception-handler",
+  "className": "GlobalExceptionHandler",
+  "framework": "spring-boot",
+  "exceptions": [
+    "Exception",
+    "IllegalArgumentException",
+    "ValidationException",
+    "AccessDeniedException",
+    "ObjectNotFoundException",
+    "RequestNotPermitted",
+    "MaxUploadSizeExceededException"
+  ],
+  "features": {
+    "customResponseFormat": true,
+    "logEachException": true,
+    "handleValidationSeparately": true,
+    "returnJson": true
+  },
+  "factories": [
+    "BaseErrorResponseDtoFactory",
+    "ValidationErrorResponseDtoFactory"
+  ],
+  "annotations": [
+    "RestControllerAdvice",
+    "ExceptionHandler"
+  ],
+  "logging": {
+    "enabled": true,
+    "logger": "AppLogger",
+    "logPrefix": "Caught exception:"
+  },
+  "statusMapping": {
+    "Exception": "500",
+    "IllegalArgumentException": "400",
+    "ValidationException": "400",
+    "AccessDeniedException": "403",
+    "ObjectNotFoundException": "404",
+    "RequestNotPermitted": "429",
+    "MaxUploadSizeExceededException": "400"
+  }
+}

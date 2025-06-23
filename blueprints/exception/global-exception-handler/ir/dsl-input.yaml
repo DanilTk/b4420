@@ -1,0 +1,14 @@
+component: ExceptionHandler
+features:
+  - global: true
+  - handle:
+      - Exception
+      - ValidationException
+      - IllegalArgumentException
+      - AccessDeniedException
+      - ObjectNotFoundException
+      - RequestNotPermitted
+      - MaxUploadSizeExceededException
+responseFormat: custom
+output: JSON
+log: true

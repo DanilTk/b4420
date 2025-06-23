@@ -1,0 +1,1 @@
+I want a global error handler that will catch all exceptions in my Spring Boot app and return custom JSON error responses. It should also handle validation errors and include support for rate limiting and file upload size exceptions.
